@@ -1,0 +1,15 @@
+Java needs to be installed first.
+sudo yum install java
+
+Download the jenkins war file using below command.
+wget -c https://updates.jenkins-ci.org/download/war/2.286/jenkins.war
+
+Put the below command in the Jenkins.sh file
+#/bin/sh
+/usr/bin/java -jar jenkins.war -Dmail.smtp.localhost=smtp.gmail.com --httpPort=8080 --logfile=/home/ec2-user/ramesh/jenkins.log --daemon
+
+Provide the execute perminssion.
+chmod +x Jenkins.sh
+
+Run the Jenkins.sh file
+./Jenkins..sh
